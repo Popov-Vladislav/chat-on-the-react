@@ -1,0 +1,97 @@
+@import '../../styles/variables';
+.dialogs {
+  .dialogs__item {
+    display: flex;
+    align-items: center;
+    height: 67px;
+    padding: 0 20px;
+    .dialogs__item-avatar {
+      position: relative;
+      margin-right: 11px;
+      img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+      }
+    }
+    .dialogs__item-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      .dialogs__item-info-top {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+    }
+    .dialogs__item-fullname {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: $black;
+    }
+    .dialogs__item-date {
+      color: $gray;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 400;
+    }
+    .dialogs__item-info-bottom {
+      display: flex;
+      .dialogs__item-text {
+        color: $gray;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 14px;
+        height: 16px;
+        line-height: 16px;
+        font-weight: 400;
+        width: 205px;
+        margin-right: 5px;
+      }
+      .dialogs__item-notification {
+        min-width: 18px;
+        height: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .dialogs__item-notification-counter {
+          font-size: 11px;
+          line-height: 13px;
+          color: white;
+          font-weight: 700;
+          background: #f46b6b;
+          border-radius: 30px;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 2px;
+          box-sizing: border-box;
+        }
+      }
+    }
+    &.dialogs__item--online {
+      .dialogs__item-avatar {
+        &::before {
+          display: block;
+          position: absolute;
+          content: '';
+          background-color: $green;
+          border-radius: 50%;
+          width: 14px;
+          height: 14px;
+          bottom: 0;
+          right: 0;
+          border: 3px solid white;
+        }
+      }
+    }
+  }
+  .message__check {
+    margin-right: 0;
+  }
+}
